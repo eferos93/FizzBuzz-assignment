@@ -1,5 +1,6 @@
 package dssc.assignment.fizzbuzz;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -28,7 +29,13 @@ public class ConvertFizzBuzzBang {
 
     @ParameterizedTest
     @ValueSource(ints = {35, 70})
-    void multiplesOf5And7ToBuzzBang(int number) {
+    void multiplesOf35ToBuzzBang(int number) {
         assertEquals("BuzzBang", fizzBuzzBang.convert(number));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {105})
+    void multiplesOf105ToFizzBuzzBang(int number) {
+        assertEquals("FizzBuzzBang", fizzBuzzBang.convert(number));
     }
 }
