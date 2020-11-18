@@ -26,4 +26,10 @@ public class ConvertFizzBuzzBang {
     void multiplesOf21ToFizzBang(int number) {
         assertEquals("FizzBang", fizzBuzzBang.convert(number));
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = {35, 70})
+    void multiplesOf5And7ToBuzzBang(int number) {
+        assertEquals("BuzzBang", fizzBuzzBang.convert(number));
+    }
 }
