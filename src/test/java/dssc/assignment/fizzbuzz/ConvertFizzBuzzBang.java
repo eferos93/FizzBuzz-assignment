@@ -16,14 +16,14 @@ public class ConvertFizzBuzzBang {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {7, 21, 84})
+    @ValueSource(ints = {7, 14, 70})
     void multiplesOf7ToBang(int number) {
         assertEquals("Bang", fizzBuzzBang.convert(number));
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {42, 63})
-    void multiplesOf3And7ToFizzBang(int number) {
+    @ValueSource(ints = {21, 42, 63, 84})
+    void multiplesOf21ToFizzBang(int number) {
         assertEquals("FizzBang", fizzBuzzBang.convert(number));
     }
 }
