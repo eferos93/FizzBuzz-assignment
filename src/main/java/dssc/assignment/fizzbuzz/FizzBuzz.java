@@ -1,6 +1,5 @@
 package dssc.assignment.fizzbuzz;
 
-import java.time.Instant;
 import java.util.stream.IntStream;
 
 public class FizzBuzz {
@@ -42,17 +41,11 @@ public class FizzBuzz {
 
     public static void main(String... args) {
         Integer n = 105;
-        playExtendedVersion(105);
+        playExtendedVersion(n);
 
     }
 
     public String convert(int number) {
-        if (number == 1) {
-            return "1";
-        } else if (number == 2){
-            return "2";
-        } else {
-            return "40";
-        }
+        return Integer.toString(number);
     }
 }
