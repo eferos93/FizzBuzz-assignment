@@ -46,4 +46,7 @@ public class FizzBuzz {
 
     }
 
+    public String covert(int number) {
+        return "1";
+    }
 }
