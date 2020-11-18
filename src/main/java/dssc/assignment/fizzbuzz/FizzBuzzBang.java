@@ -1,4 +1,8 @@
 package dssc.assignment.fizzbuzz;
+
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class FizzBuzzBang {
     public String convert(int number) {
         if (number % 105 == 0) {
@@ -15,5 +19,12 @@ public class FizzBuzzBang {
         }
 
         return Integer.toString(number);
+    }
+
+    public void print() {
+        String result = IntStream.rangeClosed(1, 105)
+                .mapToObj(this::convert)
+                .collect(Collectors.joining(", "));
+        System.out.println(result);
     }
 }
