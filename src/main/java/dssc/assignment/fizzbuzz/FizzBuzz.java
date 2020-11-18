@@ -46,7 +46,11 @@ public class FizzBuzz {
 
     }
 
-    public String covert(int number) {
-        return "1";
+    public String convert(int number) {
+        if (number == 1) {
+            return "1";
+        } else {
+            return "2";
+        }
     }
 }
